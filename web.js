@@ -7,7 +7,7 @@ var app = express.createServer(express.logger());
 
 
 app.get('/', function(request, response) {
-    var fileOutput = fs.readFileSyne("input.html");
+    var fileOutput = fs.readFileSync("index.html");
     var buffer = new Buffer(fileOutput);
     response.send(buffer.toString());
 });
